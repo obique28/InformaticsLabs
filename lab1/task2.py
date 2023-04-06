@@ -36,14 +36,14 @@ def get_average():
                 text = "Атестат без відзнаки"
 
         except Exception:
-            text = f"This value '{striped_value}' is unsupported. Please enter correct number"
+            text = f"Це значення '{striped_value}' не підтримується. Введіть правильне число"
             font_colour = "red"
 
         text_label.config(text=text, fg=font_colour)
         canvas1.create_window(200, 210, window=text_label)
 
 
-button1 = tk.Button(text='Calculate', command=get_average, bg='brown', fg='white',
+button1 = tk.Button(text='Розрахувати', command=get_average, bg='brown', fg='white',
                     font=('helvetica', 9, 'bold'))
 canvas1.create_window(200, 180, window=button1)
 
