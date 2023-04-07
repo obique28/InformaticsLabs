@@ -19,7 +19,7 @@ canvas1.create_window(200, 140, window=entry1)
 text_label = tk.Label(root, font=('helvetica', 10))
 
 
-def get_average():
+def print_charter_count():
     values = entry1.get()
 
     lst = []
@@ -44,7 +44,7 @@ def get_average():
     canvas1.create_window(200, 210, window=text_label)
 
 
-button1 = tk.Button(text='Розрахувати', command=get_average, bg='brown', fg='white',
+button1 = tk.Button(text='Розрахувати', command=print_charter_count, bg='brown', fg='white',
                     font=('helvetica', 9, 'bold'))
 canvas1.create_window(200, 180, window=button1)
 
