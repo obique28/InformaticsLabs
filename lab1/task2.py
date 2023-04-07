@@ -19,7 +19,6 @@ canvas1.create_window(200, 140, window=entry1)
 text_label = tk.Label(root, font=('helvetica', 10))
 
 def get_average():
-    canvas1.delete()
     value = entry1.get()
 
     striped_value = value.strip()
@@ -28,7 +27,7 @@ def get_average():
         try:
             mark = float(striped_value)
             if mark > 12 or mark < 1:
-                text = "Please enter float value between [0.000001 and 12]"
+                text = "Введіть число в діапазоні [1, 12]"
                 font_colour = "red"
             elif mark >= 10:
                 text = "Атестат з відзнакою"
@@ -36,7 +35,7 @@ def get_average():
                 text = "Атестат без відзнаки"
 
         except Exception:
-            text = f"Це значення '{striped_value}' не підтримується. Введіть правильне число"
+            text = f"Значення '{striped_value}' не підтримується. Введіть правильне число"
             font_colour = "red"
 
         text_label.config(text=text, fg=font_colour)

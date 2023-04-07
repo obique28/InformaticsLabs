@@ -31,10 +31,10 @@ def get_average():
                 if striped_value:
                     int_value = int(striped_value)
                     if int_value < 1 or int_value > 12:
-                        raise Exception(f"Value {int_value} is not between [1, 12]")
+                        raise Exception(f"Значення '{int_value}' має бути в діапазоні [1,12]")
                     lst.append(int_value)
             except Exception:
-                raise Exception(f"Це значення '{striped_value}' не підтримується. Введіть правильне число")
+                raise Exception(f"Значення '{striped_value}' не підтримується. Введіть правильне число")
         count = len([value for value in lst if value >= 10])
         text = f'Кількість грамот до видачі: {count}'
     except Exception as e:
