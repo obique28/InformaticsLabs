@@ -34,7 +34,7 @@ def get_average():
             except Exception:
                 raise Exception(f"Це значення '{striped_value}' не підтримується. Введіть правильне число")
         avg = sum(lst) / len(lst)
-        text = f'Середнє знаення є: {avg}'
+        text = f'Середнє значення є: {avg}'
     except Exception as e:
         font_colour = "red"
         text = str(e)
